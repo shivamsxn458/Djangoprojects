@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Sell Enquiry Form</title>
+
+
+
+</head>
+
+<body>
+
+
+ <style>
+		body {
+			background-color: #F8F0E3;
+			background-image:
+repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+background-size: 70px 120px; max-width: 100%;
+		}
+ </style>
+
+
+
+
+
+
+<!--###################################################################################-->
+<!--<div class="container-fluid" style="background-color:#F8F0E3;-->
+<!--background-image:-->
+<!--repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),-->
+<!--repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),-->
+<!--linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),-->
+<!--linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));-->
+<!--background-size: 70px 120px; max-width: 100%;">-->
+
+
+<div class="centerDiv">
+<style>
+.centerDiv {
+    position: relative;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 440px;
+    height: auto;
+    background-color: #0000001A;
+    color: maroon;
+    text-align: center;
+    padding-top:0%;
+    backdrop-filter: blur(7px);
+}
+</style>
+
+
+
+{{ form.non_field_errors }}
+	<form method="post" enctype="multipart/form-data">
+		<hr style="background: maroon;">
+		 <h2> Sell Enquiry Form </h2>
+		<hr style="background: maroon;">
+        <br><br>
+
+		{% csrf_token %}
+<!--        {{form.as_p}}-->
+{% for field in form %}
+
+
+  <div style="display: inline-block; margin-right: 10px;">
+<!--    {% if field.label != "Dropdown field"%} &lt;!&ndash;  removing Dropdown label BUT now it getting removed in forms.py using self.fields['username'].label = '' &ndash;&gt;-->
+      {{ field.label_tag }} <br>
+      {{ field }}<br>
+      <hr>
+<!--    {% endif %}-->
+  </div>
+{% endfor %}
+
+		<hr>
+		<button class="btn btn-dark" type="submit" style="background:maroon;"> Submit </button>
+<!--		<input type="submit">-->
+<br>
+	</form>
+</div>
+
+<br><br>
+
+<!--###################################################################################-->
+<div style="position: fixed; top: 50%; right: 10px; transform: translateY(-50%);">
+ <a href="http://localhost:8000/shop/sizechart" class="btn btn-warning" style="color: maroon;" >Size Chart</a>
+
+
+</div>
+</body>
+<script>
+  document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+</script>
+</html>
+
