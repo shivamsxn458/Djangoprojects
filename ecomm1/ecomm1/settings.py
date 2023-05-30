@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-import django
+
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
