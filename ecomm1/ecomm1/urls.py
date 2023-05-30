@@ -20,7 +20,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-
+# changing the header and title text of Django admin panel
+admin.site.site_header  =  "Weddpparels Administrator Panel"  #for media
+admin.site.site_title  =  "Weddpparels Admin Panel"           #for media
+##########################################################
 
 
 urlpatterns = [
