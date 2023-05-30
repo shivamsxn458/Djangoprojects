@@ -34,7 +34,6 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.auth',
-    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -45,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.account', # must
     'allauth.socialaccount', # must
     'allauth.socialaccount.providers.google', # new
+    'django.contrib.admin',
 
 ]
 
@@ -60,7 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ecomm1.urls'
+
 
 TEMPLATES = [
     {
@@ -78,8 +78,10 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'ecomm1.wsgi.application'
 
+ROOT_URLCONF = 'ecomm1.urls'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
