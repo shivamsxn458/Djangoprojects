@@ -18,9 +18,20 @@
     <title>{% for product in productsfilter %}
         {{ product.subcategory }}
         {% endfor %}</title>
+
+
+    <!--navbar start-->
+
 <nav class= "navbar navbar-expand-lg bg-transparent navbar-light navbar-airy bg-fixed-white" style="margin: 0;">
 <div class="container-fluid">
    <a class="navbar-brand" href="http://localhost:8000/shop"><img class="img-fluid" src="{% static '/media/sitelogo.png' %}" ></a>
+
+<!--  <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--  <a class="navbar-brand" href="#">-->
+<!--    <img src="https://weddpparel.s3.ap-south-1.amazonaws.com/8148810110_9990a7d4-7408-4e5e-8c1c-318c8de46c82.png" alt="Logo">-->
+<!--  </a>-->
+
+   <!--span/breadcrumb in mobile view Start-->
 <style>
   .centered-button {
     margin: 10px;
@@ -29,14 +40,25 @@
   .navbar-toggler {
   }
 </style>
+
 <div class="centered-button">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 </div>
+<!--span/breadcrumb in mobile view END-->
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+<!--      <li class="nav-item active">-->
+<!--        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+<!--      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link" href="#">Link</a>-->
+<!--      </li>-->
+
+      <!--li of men below-->
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownmen" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: brown;">
           Men
@@ -49,6 +71,9 @@
         </div>
       </li>
       &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <!--li of women below-->
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownwomen" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: brown;">
           Women
@@ -56,10 +81,16 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownwomen" style="background-color:#F8F0E3;background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3);">
           <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/BridalLehenga" style="color: brown;">Bridal Lehenga</a>
           <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/Gown" style="color: brown;">Gown</a>
+<!--          <div class="dropdown-divider"></div>-->
           <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/Saree" style="color: brown;">Saree</a>
+
+
         </div>
       </li>
      &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <!--li of Accessories below-->
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownacc" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: brown;">
           Accessories
@@ -69,12 +100,23 @@
           <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/JewelleryMen" style="color: brown;">Jewellery Men</a>
             <div class="dropdown-divider"></div>
           <a class="dropdown-item " href="http://localhost:8000/shop/categorydisplay/Pagdi" style="color: brown;">Safa/Pagdi</a>
+<!--          <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/Mala" style="color: brown;">Mala</a>-->
           <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/FootwearMen" style="color: brown;">Footwear Men</a>
+
+
+
         </div>
       </li>
+
     </ul>
+
 <br>
+
+<!-- Login/Logout using Google start-->
+
+
 {% load socialaccount %}
+
 <html>
 <body>
 {% if user.is_authenticated %}
@@ -86,24 +128,41 @@
 
   </a> &nbsp;
 {% endif %}
+
 <a href="http://localhost:8000/accounts/logout/" class="btn btn-outline-dark btn-sm">Logout</a>
+
 </body>
 </html>
+
+
  </div>
 </nav>
+
+
+<!--below is the CDN scripts for slick for displaying slider in products-->
  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+
 </head>
+
 <body>
+
+
+
  <style>
 		body {
 			background-color: #F8F0E3;
 			background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3); padding: 0px;
 		}
  </style>
+
 <br>
+
+<!-- banner start-->
 <div style="background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3); text-align: center; padding: 10px;">
     <h2 style="font-size: 48px; font-weight: bold; margin: 0; color: maroon; letter-spacing: 3px; text-shadow: 1px 1px 2px #ccc;">
         {% for product in productsfilter %}
@@ -115,10 +174,24 @@
         Discover the ultimate in luxury with our exclusive collection. Each piece is a masterpiece of elegance and sophistication.
    <br><br>
     </p>
+
 </div>
+
+
+
 <div style="background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3); text-align: right; padding: 5px;">
         <a href="http://localhost:8000/shop/sizechart" style="color:maroon;">Size Chart</a>
 </div>
+
+<!--banner END-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
+</style>
+
+
+<!--Products from Database in form of cards >> start below :-->
+
 <div class="container-fluid embed-responsive" style="background-color: maroon;
 
 background-image:
@@ -127,22 +200,29 @@ repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px,
 linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
 linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
 background-size: 70px 120px; max-width: 100%;">
+
+
 <div class="row">
   <link href="{% static 'css/style.css'%}" rel="stylesheet">
 {% for product in products %}
   <div class="col-md-3 my-3">
     <div class="card1">
+
         <div class="slider">
             <div><img class="card-img-top" style="height:380px;" src="/media/{{ product.image }}" alt="{{ product.name }}"></div>
             <div><img class="card-img" style="height:380px;" src="/media/{{ product.backimage }}" alt="{{ product.name }}"></div>
             <div><img class="card-img" style="height:380px;" src="/media/{{ product.sideimage }}" alt="{{ product.name }}"></div>
         </div>
+
+
+<!--      <img class="card-img-top" style="height:380px;" src="/media/{{ product.image }}" alt="{{ product.name }}">-->
       <div class="card-body" style="color: #F8F0E3;">
         <h5 class="card-title">{{ product.product_name }}</h5>
         <p class="card-text" >Size : {{ product.size }} </p>
         <p class="card-text" >Date of Purchase : {{ product.purchase_date }} </p>
         <p class="card-text">Price : ₹ {{ product.price }}</p>
         <p> <a  href="{{ product.url }}">Compare with New</a></p>
+<!--in below anchor tag, href url is concatenated with product_name of products using #{{product.product_name}}-->
         <a href="http://localhost:8000/shop/sendpurchaseenquiry/#{{ product.product_name }}" id="{{ product.product_name }}" class="btn" style="color: maroon ;background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3); padding: 6px; background-color:#F6BE00 ; position: fixed; bottom: 20px; left: 20px;">Send Purchase Enquiry</a>
         <input id="sendpurchaseenquiry" type="hidden" name="sendpurchaseenquiryy_product_name" value="{{ product.product_name }}" class="sendpurchaseenquiryy-product-name">
       </div>
@@ -151,6 +231,9 @@ background-size: 70px 120px; max-width: 100%;">
 {% endfor %}
 </div>
 </div>
+
+
+
 <script>
   $('.slider').slick({
      autoplay: false,
@@ -159,6 +242,7 @@ background-size: 70px 120px; max-width: 100%;">
     arrows: true,
   });
 </script>
+
 <style>
   .slider .slick-prev {
     left: 10px;
@@ -167,10 +251,25 @@ background-size: 70px 120px; max-width: 100%;">
     right: 10px;
   }
 </style>
+
+
+
+ <!--Products from Database in form of cards >> END -->
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
 </body>
+
+
+
+  <!--footer start-->
 <footer
 
           class="text-left text-lg-start text-white"
@@ -277,12 +376,6 @@ background-size: 70px 120px; max-width: 100%;">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
  </footer>
-
-<script>
-  document.addEventListener("contextmenu", function(e) {
-    e.preventDefault();
-  });
-</script>
 
 </html>
 
