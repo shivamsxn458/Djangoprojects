@@ -142,7 +142,7 @@ def sendpurchaseenquiry(request):
             purchase_enquiry = form.save(commit=False)
             purchase_enquiry.username = username
             purchase_enquiry.save()
-            return redirect('http://localhost:8000/shop/formsubmitsuccess')
+            return redirect('http://weddpparels.com/shop/formsubmitsuccess')
             # return HttpResponse("You have submitted the Purchase enquiry form successfully.")
     else:
         form = CustomerForm(initial={'username': username})
@@ -165,7 +165,7 @@ def sellenquiry(request):
             sell_enquiry = form.save(commit=False)
             sell_enquiry.username = username
             sell_enquiry.save()
-            return redirect('http://localhost:8000/shop/formsubmitsuccess')
+            return redirect('http://weddpparels.com/shop/formsubmitsuccess')
             # return HttpResponse("You have submitted the Sell enquiry form successfully.")
             # button_html = '<a href="http://localhost:8000/shop">You have successfully submitted the sell enquiry. <br><br><br>  Go to Home Page</a>'
             # return HttpResponse(button_html)
