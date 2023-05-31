@@ -170,6 +170,9 @@ ACCOUNT_LOGOUT_ON_GET =True
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 CORS_ORIGIN_ALLOW_ALL = True
+CSRF_TRUSTED_ORIGINS = [
+    'http://weddpparels.com',
+]
 CORS_ORIGIN_WHITELIST = [
     'http://weddpparels.com',
     'http://weddpparels.com/shop',
