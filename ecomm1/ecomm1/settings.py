@@ -168,7 +168,7 @@ ACCOUNT_LOGOUT_ON_GET =True
 
 
 
-
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 
