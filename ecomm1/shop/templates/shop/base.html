@@ -223,7 +223,7 @@ background-size: 70px 120px; max-width: 100%;">
         <p class="card-text">Price : ₹ {{ product.price }}</p>
         <p> <a  href="{{ product.url }}">Compare with New</a></p>
 <!--in below anchor tag, href url is concatenated with product_name of products using #{{product.product_name}}-->
-        <a href="http://localhost:8000/shop/sendpurchaseenquiry/#{{ product.product_name }}" id="{{ product.product_name }}" class="btn" style="color: maroon ;background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3); padding: 6px; background-color:#F6BE00 ; position: fixed; bottom: 20px; left: 20px;">Send Purchase Enquiry</a>
+        <a href="http://localhost:8000/shop/sendpurchaseenquiry/#{{ product.product_name }}" id="{{ product.product_name }}" class="btn" style="color: maroon ;background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3); padding: 6px; background-color:#F6BE00 ; position: absolute;">Send Purchase Enquiry</a>
         <input id="sendpurchaseenquiry" type="hidden" name="sendpurchaseenquiryy_product_name" value="{{ product.product_name }}" class="sendpurchaseenquiryy-product-name">
       </div>
     </div>
