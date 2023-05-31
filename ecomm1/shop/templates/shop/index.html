@@ -59,9 +59,9 @@
           Men
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdmen" style="background-color:#F8F0E3;background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3);">
-          <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/Sherwani" style="color: brown;">Sherwani</a>
-          <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/Jackets" style="color: brown;">Jackets</a>
-          <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/ReceptionOutfits" style="color: brown;">Reception Outfits</a>
+          <a class="dropdown-item" href="http://weddpparels.com/shop/categorydisplay/Sherwani" style="color: brown;">Sherwani</a>
+          <a class="dropdown-item" href="http://weddpparels.com/shop/categorydisplay/Jackets" style="color: brown;">Jackets</a>
+          <a class="dropdown-item" href="http://weddpparels.com/shop/categorydisplay/ReceptionOutfits" style="color: brown;">Reception Outfits</a>
         </div>
       </li>
       &nbsp;&nbsp;&nbsp;&nbsp;
@@ -70,9 +70,9 @@
           Women
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownwomen" style="background-color:#F8F0E3;background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3);">
-          <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/BridalLehenga" style="color: brown;">Bridal Lehenga</a>
-          <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/Gown" style="color: brown;">Gown</a>
-          <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/Saree" style="color: brown;">Saree</a>
+          <a class="dropdown-item" href="http://weddpparels.com/shop/categorydisplay/BridalLehenga" style="color: brown;">Bridal Lehenga</a>
+          <a class="dropdown-item" href="http://weddpparels.com/shop/categorydisplay/Gown" style="color: brown;">Gown</a>
+          <a class="dropdown-item" href="http://weddpparels.com/shop/categorydisplay/Saree" style="color: brown;">Saree</a>
         </div>
       </li>
      &nbsp;&nbsp;&nbsp;&nbsp;
@@ -81,12 +81,12 @@
           Accessories
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownacc" style="background-color:#F8F0E3;background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3);">
-          <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/JewelleryWomen" style="color: brown;">Jewellery Women</a>
-          <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/JewelleryMen" style="color: brown;">Jewellery Men</a>
+          <a class="dropdown-item" href="http://weddpparels.com/shop/categorydisplay/JewelleryWomen" style="color: brown;">Jewellery Women</a>
+          <a class="dropdown-item" href="http://weddpparels.com/shop/categorydisplay/JewelleryMen" style="color: brown;">Jewellery Men</a>
             <div class="dropdown-divider"></div>
-          <a class="dropdown-item " href="http://localhost:8000/shop/categorydisplay/Pagdi" style="color: brown;">Safa/Pagdi</a>
+          <a class="dropdown-item " href="http://weddpparels.com/shop/categorydisplay/Pagdi" style="color: brown;">Safa/Pagdi</a>
 <!--          <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/Mala" style="color: brown;">Mala</a>-->
-          <a class="dropdown-item" href="http://localhost:8000/shop/categorydisplay/FootwearMen" style="color: brown;">Footwear Men</a>
+          <a class="dropdown-item" href="http://weddpparels.com/shop/categorydisplay/FootwearMen" style="color: brown;">Footwear Men</a>
         </div>
       </li>
     </ul>
@@ -102,13 +102,13 @@
 
   </a>
 {% endif %}
-<a href="http://localhost:8000/accounts/logout/" style="background:maroon;" class="btn btn-dark btn-sm">Logout</a>
+<a href="http://weddpparels.com/accounts/logout/" style="background:maroon;" class="btn btn-dark btn-sm">Logout</a>
 <!-- Login/Logout using Google END-->
 
 
 <!-- Profile button Start-->
 {% if user.is_authenticated %}
-<a href="http://localhost:8000/shop/profile" style="background:maroon;" class="btn btn-dark btn-sm" >
+<a href="http://weddpparels.com/shop/profile" style="background:maroon;" class="btn btn-dark btn-sm" >
     <img height="16px" style="margin-bottom:3px; margin-right:5px" alt="" src="/static/media/profile.svg"/>
     My Profile </a>
     {% endif %}
@@ -222,7 +222,7 @@ background-size: 70px 120px; max-width: 100%;">
         <p class="card-text">Price : ₹ {{ product.price }}</p>
         <p> <a  href="{{ product.url }}">Compare with New</a></p>
 <!--in below anchor tag, href url is concatenated with product_name of products using #{{product.product_name}}-->
-        <a href="http://localhost:8000/shop/sendpurchaseenquiry/#{{ product.product_name }}" id="{{ product.product_name }}" class="btn" style="color: maroon ;background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3); padding: 6px; background-color:#F6BE00 ; position: absolute; bottom: 20px; left: 20px;">Send Purchase Enquiry</a>
+        <a href="http://weddpparels.com/shop/sendpurchaseenquiry/#{{ product.product_name }}" id="{{ product.product_name }}" class="btn" style="color: maroon ;background-image: linear-gradient(to right,#f8c3a3, #ffefc1, #f8c3a3); padding: 6px; background-color:#F6BE00 ; position: absolute; bottom: 20px; left: 20px;">Send Purchase Enquiry</a>
         <input id="sendpurchaseenquiry" type="hidden" name="sendpurchaseenquiryy_product_name" value="{{ product.product_name }}" class="sendpurchaseenquiryy-product-name">
       </div>
     </div>
@@ -259,7 +259,7 @@ background-size: 70px 120px; max-width: 100%;">
         We will connect you with best buyers. Send us your enquiry & we will get back to you.
       Note: Your Apparels or accessories should be of any known brand like Manyavar, Louis Phillipe, Titan etc and should not be older than 18 months from the date of purchase.
   </p>
-    <a href="http://localhost:8000/shop/Sellenquiry" style="text-decoration: none;">
+    <a href="http://weddpparels.com/shop/Sellenquiry" style="text-decoration: none;">
   <button style="background-color: maroon; color: white; padding: 10px 20px; border-radius: 5px; font-size: 20px; font-weight: bold; border: none; margin-top: 30px;">Sell Now</button>
   </a>
 </div>
