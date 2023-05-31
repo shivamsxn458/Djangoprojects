@@ -146,8 +146,8 @@ MEDIA_URL = '/media/'
 SITE_ID = 2
 
 
-LOGIN_REDIRECT_URL = '/shop/'
-LOGOUT_REDIRECT_URL = '/shop/'
+LOGIN_REDIRECT_URL = 'http://weddpparels.com/'
+LOGOUT_REDIRECT_URL = 'http://weddpparels.com/'
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
