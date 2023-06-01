@@ -174,9 +174,9 @@ CSRF_TRUSTED_ORIGINS = [
     'http://weddpparels.com',
 ]
 CORS_ORIGIN_WHITELIST = [
-    'http://weddpparels.com',
-    'http://weddpparels.com/shop',
-    https://weddpparels.com/accounts/google/login/callback/,
+    'https://weddpparels.com',
+    'https://weddpparels.com/shop',
+    'https://weddpparels.com/accounts/google/login/callback/',
 ]
 
 
