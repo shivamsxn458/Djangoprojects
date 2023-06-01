@@ -171,7 +171,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 CORS_ORIGIN_ALLOW_ALL = True
 CSRF_TRUSTED_ORIGINS = [
-    'http://weddpparels.com',
+    'https://weddpparels.com',
 ]
 CORS_ORIGIN_WHITELIST = [
     'https://weddpparels.com',
