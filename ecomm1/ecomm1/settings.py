@@ -145,8 +145,8 @@ MEDIA_URL = '/media/'
 SITE_ID = 2
 
 
-LOGIN_REDIRECT_URL = 'http://weddpparels.com/'
-LOGOUT_REDIRECT_URL = 'http://weddpparels.com/'
+LOGIN_REDIRECT_URL = 'https://weddpparels.com/'
+LOGOUT_REDIRECT_URL = 'https://weddpparels.com/'
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -176,6 +176,7 @@ CSRF_TRUSTED_ORIGINS = [
 CORS_ORIGIN_WHITELIST = [
     'http://weddpparels.com',
     'http://weddpparels.com/shop',
+    https://weddpparels.com/accounts/google/login/callback/,
 ]
 
 
