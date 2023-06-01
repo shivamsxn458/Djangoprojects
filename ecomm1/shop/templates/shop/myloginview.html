@@ -8,7 +8,7 @@
 {% if user.is_authenticated %}
   <h6 class="text-info">Hi! {{ user.username }}</h6> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 {% else %}
-  <a href="{% provider_login_url 'google'%}?next=/shop/" class="btn btn-outline-dark btn-sm" >
+  <a href="{% provider_login_url 'google'%}?next=/" class="btn btn-outline-dark btn-sm" >
     <img width="16px" style="margin-bottom:3px; margin-right:5px" alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
     Login
 
