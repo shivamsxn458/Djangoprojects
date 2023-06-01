@@ -167,9 +167,6 @@ SOCIALACCOUNT_LOGIN_ON_GET=True
 ACCOUNT_LOGOUT_ON_GET =True
 
 
-
-
-
 CORS_ORIGIN_ALLOW_ALL = True
 CSRF_TRUSTED_ORIGINS = [
     'https://weddpparels.com',
@@ -177,7 +174,6 @@ CSRF_TRUSTED_ORIGINS = [
 CORS_ORIGIN_WHITELIST = [
     'https://weddpparels.com',
     'https://weddpparels.com/shop',
-    'https://weddpparels.com/accounts/google/login/callback/',
 ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
