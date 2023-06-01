@@ -40,11 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'shop.apps.ShopConfig',
     'django.contrib.sites', # must
+    'django.contrib.admin',
     'allauth', # must
     'allauth.account', # must
     'allauth.socialaccount', # must
-    'allauth.socialaccount.providers.google', # new
-    'django.contrib.admin',
+    'allauth.socialaccount.providers.google',
 
 ]
 
