@@ -134,7 +134,6 @@ def index(request):
 
 
 def sendpurchaseenquiry(request):
-
     username = request.user.username
     if request.method == 'POST':
         form = CustomerForm(request.POST)
@@ -156,7 +155,7 @@ def formsubmitsuccess(request):
     return render(request, 'shop/formsubmitsuccess.html')
 
 
-@login_required
+
 def sellenquiry(request):
     username = request.user.username
     if request.method == 'POST':
