@@ -108,6 +108,45 @@ background-size: 70px 120px; max-width: 100%;
 
 
 </div>
+	
+</div>
+
+{% else %}
+<div class="elseDiv">
+
+<style>
+.elseDiv{
+    position: relative;
+    top: -23px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 74%;
+    height: 320px;
+    background-color: #0000001A;
+    color: maroon;
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(7px);
+}
+</style>
+</style>
+
+<hr>
+<h1 style="font-size: 24px; text-align:center;"> Kindly login and get back to submit this Sell enquiry successfully. Thankyou!</h1>
+	<br><br>
+  <a href="{% provider_login_url 'google'%}?next=/shop/" class="btn btn-outline-dark btn-sm" >
+    <img width="32px" style="margin-bottom:3px; margin-right:5px;" alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+    Login
+  </a> &nbsp;
+ <hr>
+{% endif %}
+
+</div>	
+	
+	
+	
 </body>
 <script>
   document.addEventListener("contextmenu", function(e) {
