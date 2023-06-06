@@ -45,6 +45,10 @@ background-size: 70px 120px; max-width: 100%;
 <!--linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));-->
 <!--background-size: 70px 120px; max-width: 100%;">-->
 
+	
+
+{% load socialaccount %}
+{% if user.is_authenticated %}	
 
 <div class="centerDiv">
 <style>
@@ -95,6 +99,7 @@ background-size: 70px 120px; max-width: 100%;
 	</form>
 </div>
 
+{% endfor %}
 <br><br>
 
 <!--###################################################################################-->
