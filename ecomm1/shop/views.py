@@ -260,4 +260,5 @@ def sizechart(request):
     return render(request, 'shop/sizechart.html')
 
 
-
+def privacypolicy(request):
+    return render(request, 'shop/privacypolicy.html')

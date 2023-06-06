@@ -1,16 +1,6 @@
-import os
-from django.conf import settings
+import multiprocessing
 
-# Set the DJANGO_SETTINGS_MODULE environment variable
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')
-
-# Configure Django settings
-settings.configure()
-
-# Add the static file serving rule
-def on_starting(server):
-    server.log.info("Starting Gunicorn.")
-    server.log.info(f"Serving static files from {settings.STATIC_ROOT}")
-
-# Rest of the Gunicorn configuration...
-
+#bind = "127.0.0.1:8000"  # Change the IP and port as needed
+workers = multiprocessing.cpu_count() * 2 
+worker_class = "gthread"  # For better concurrency with Django 3.0+
+timeout = 120
