@@ -26,6 +26,9 @@ urlpatterns = [
     path('sizechart',  views.sizechart, name=""),
     path('formsubmitsuccess', views.formsubmitsuccess, name=""),
     path('privacypolicy', views.privacypolicy, name=""),
+
+    path('api/products/', views.product_api, name='product_api') #for JSON api
+    
 ]
 
 
