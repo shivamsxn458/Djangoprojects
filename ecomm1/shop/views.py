@@ -261,3 +261,22 @@ def sizechart(request):
 
 def privacypolicy(request):
     return render(request, 'shop/privacypolicy.html')
+
+
+##########################################  JSON API'S BELOW  ##########################################
+
+def product_api(request):
+    products = Product.objects.all()[:8]
+    product_list = [
+        {
+            'frontimage': product.image.url if product.image else None,
+            'sideimage': product.sideimage.url if product.sideimage else None,
+            'backimage': product.backimage.url if product.backimage else None,
+            'name': product.product_name,
+            'Size': product.size,
+            'Purchase Date': product.purchase_date,
+            'Compare with New': product.url
+        }
+        for product in products
+    ]
+    return JsonResponse({'products': product_list})
