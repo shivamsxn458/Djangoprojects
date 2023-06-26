@@ -12,7 +12,7 @@ from .forms import SellEnquiryForm
 from django.contrib.auth.decorators import login_required
 from allauth.socialaccount.models import SocialAccount
 from django.contrib.auth.decorators import user_passes_test
-
+from django.http import JsonResponse
 
 
 # -----------------------------------------------------------------------------------------------
