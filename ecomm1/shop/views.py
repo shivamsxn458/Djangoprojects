@@ -269,14 +269,15 @@ def product_api(request):
     products = Product.objects.all()[:8]
     product_list = [
         {
-            'frontimage': product.image.url if product.image else None,
-            'sideimage': product.sideimage.url if product.sideimage else None,
-            'backimage': product.backimage.url if product.backimage else None,
-            'name': product.product_name,
-            'Size': product.size,
-            'Purchase Date': product.purchase_date,
-            'Compare with New': product.url
+            'frontimage':product.image.url if product.image else None,
+            'sideimage':product.sideimage.url if product.sideimage else None,
+            'backimage':product.backimage.url if product.backimage else None,
+            'name':product.product_name,
+            'Size':product.size,
+            'PurchaseDate':product.purchase_date,
+            'ComparewithNew':product.url
         }
         for product in products
     ]
-    return JsonResponse({'products': product_list})
+    # return JsonResponse({'products': product_list})
+    return JsonResponse(product_list, safe=False)
