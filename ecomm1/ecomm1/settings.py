@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount', # must
     'allauth.socialaccount.providers.google',
     'django.contrib.admin',
+    'corsheaders',
 
 
 ]
@@ -60,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 
@@ -181,3 +183,7 @@ CORS_ORIGIN_WHITELIST = [
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+
+CORS_ORIGIN_WHITELIST = [
+    '*',
+]
