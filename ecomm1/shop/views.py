@@ -269,7 +269,7 @@ def product_api(request):
     products = Product.objects.all()[:8]
     product_list = [
         {
-            'frontimage':product.image.url if product.image else None,
+            'frontimage':request.build_absolute_uri(product.image.url) if product.image else None,
             'sideimage':product.sideimage.url if product.sideimage else None,
             'backimage':product.backimage.url if product.backimage else None,
             'name':product.product_name,
