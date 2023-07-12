@@ -270,8 +270,8 @@ def product_api(request):
     product_list = [
         {
             'frontimage':request.build_absolute_uri(product.image.url) if product.image else None,
-            'sideimage':request.build_absolute_uri if product.sideimage else None,
-            'backimage':request.build_absolute_uri if product.backimage else None,
+            'sideimage':request.build_absolute_uri(product.sideimage.url) if product.sideimage else None,
+            'backimage':request.build_absolute_uri(product.backimage.url) if product.backimage else None,
             'name':product.product_name,
             'Size':product.size,
             'PurchaseDate':product.purchase_date,
