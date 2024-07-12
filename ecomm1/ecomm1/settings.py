@@ -26,7 +26,7 @@ SECRET_KEY = 'ssfhg1x@a^s9xdmrye3_(pvf=7b*a5ha!25h+v1k#is4!z^e9t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['weddpparels.com' , 'weddpparels.com/shop', 'www.weddpparels.com' , 'https://weddpparels.com']
+ALLOWED_HOSTS = ['localhost:8000/shop','13.127.3.72' , 'weddpparels.com' , 'weddpparels.com/shop', 'www.weddpparels.com' , 'https://weddpparels.com']
 
 
 # Application definition
@@ -171,6 +171,8 @@ ACCOUNT_LOGOUT_ON_GET =True
 
 CORS_ORIGIN_ALLOW_ALL = True
 CSRF_TRUSTED_ORIGINS = [
+
+    'http://localhost:8000/shop',
     'https://weddpparels.com',
     'http://weddpparels.com/shop',
     'https://weddpparels.com/shop/',
@@ -178,7 +180,9 @@ CSRF_TRUSTED_ORIGINS = [
 CORS_ORIGIN_WHITELIST = [
     'https://weddpparels.com',
     'https://weddpparels.com/shop',
-    'http://weddpparels.com/shop/'
+    'http://weddpparels.com/shop/',
+    'http://localhost:8000/shop',
+    'http://localhost:8000',
 ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
