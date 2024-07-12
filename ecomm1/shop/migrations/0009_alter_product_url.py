@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='product',
             name='url',
-            field=models.URLField(blank=True, default='http://weddpparels.com'),
+            field=models.URLField(blank=True, default='http://weddpparels.in'),
         ),
     ]

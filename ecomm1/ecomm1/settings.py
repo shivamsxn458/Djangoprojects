@@ -26,7 +26,7 @@ SECRET_KEY = 'ssfhg1x@a^s9xdmrye3_(pvf=7b*a5ha!25h+v1k#is4!z^e9t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost:8000/shop','13.127.3.72' , 'weddpparels.com' , 'weddpparels.com/shop', 'www.weddpparels.com' , 'https://weddpparels.com']
+ALLOWED_HOSTS = ['localhost:8000/shop','13.127.3.72' , 'weddpparels.in' , 'weddpparels.in/shop', 'www.weddpparels.in' , 'https://weddpparels.in']
 
 
 # Application definition
@@ -148,8 +148,8 @@ MEDIA_URL = '/media/'
 SITE_ID = 2
 
 
-LOGIN_REDIRECT_URL = 'http://weddpparels.com/'
-LOGOUT_REDIRECT_URL = 'http://weddpparels.com/'
+LOGIN_REDIRECT_URL = 'http://weddpparels.in/'
+LOGOUT_REDIRECT_URL = 'http://weddpparels.in/'
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -173,14 +173,14 @@ CORS_ORIGIN_ALLOW_ALL = True
 CSRF_TRUSTED_ORIGINS = [
 
     'http://localhost:8000/shop',
-    'https://weddpparels.com',
-    'http://weddpparels.com/shop',
-    'https://weddpparels.com/shop/',
+    'https://weddpparels.in',
+    'http://weddpparels.in/shop',
+    'https://weddpparels.in/shop/',
 ]
 CORS_ORIGIN_WHITELIST = [
-    'https://weddpparels.com',
-    'https://weddpparels.com/shop',
-    'http://weddpparels.com/shop/',
+    'https://weddpparels.in',
+    'https://weddpparels.in/shop',
+    'http://weddpparels.in/shop/',
     'http://localhost:8000/shop',
     'http://localhost:8000',
 ]
