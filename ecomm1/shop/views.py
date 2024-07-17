@@ -267,17 +267,22 @@ def privacypolicy(request):
 
 def product_api(request):
     products = Product.objects.filter(subcategory='Bridal Lehenga')
-    product_list = [
-        {
-            'frontimage':request.build_absolute_uri(product.image.url) if product.image else None,
-            'sideimage':request.build_absolute_uri(product.sideimage.url) if product.sideimage else None,
-            'backimage':request.build_absolute_uri(product.backimage.url) if product.backimage else None,
-            'name':product.product_name,
-            'Size':product.size,
-            'PurchaseDate':product.purchase_date,
-            'ComparewithNew':product.url
-        }
-        for product in products
-    ]
-    # return JsonResponse({'products': product_list})
-    return JsonResponse(product_list, safe=False)
+    productsfilter = Product.objects.filter(subcategory='Bridal Lehenga')[:8]
+    context = {'products': products, 'productsfilter': productsfilter}
+    return render(request, 'shop/navbarcatbridallehenga.html',context)
+    
+    # products = Product.objects.filter(subcategory='Bridal Lehenga')
+    # product_list = [
+    #     {
+    #         'frontimage':request.build_absolute_uri(product.image.url) if product.image else None,
+    #         'sideimage':request.build_absolute_uri(product.sideimage.url) if product.sideimage else None,
+    #         'backimage':request.build_absolute_uri(product.backimage.url) if product.backimage else None,
+    #         'name':product.product_name,
+    #         'Size':product.size,
+    #         'PurchaseDate':product.purchase_date,
+    #         'ComparewithNew':product.url
+    #     }
+    #     for product in products
+    # ]
+    # # return JsonResponse({'products': product_list})
+    # return JsonResponse(product_list, safe=False)
