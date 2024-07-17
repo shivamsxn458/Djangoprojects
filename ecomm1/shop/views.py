@@ -112,7 +112,8 @@ def profile(request):
 # @login_required    (@login_required is a login decorator which can be put before a function, it requires google auth etc to view that particular thing)
 
 def index(request):
-    products = Product.objects.all()[:8]
+    # products = Product.objects.all()[:8]
+    products = Product.objects.filter(subcategory='Bridal Lehenga')[:8]
     context = {'products': products}
     return render(request, 'shop/index.html', context)
 
@@ -268,8 +269,7 @@ def privacypolicy(request):
 def product_api(request):
     products = Product.objects.filter(subcategory='Bridal Lehenga')
     productsfilter = Product.objects.filter(subcategory='Bridal Lehenga')[:8]
-    context = {'products': products, 'productsfilter': productsfilter}
-    return render(request, 'shop/navbarcatbridallehenga.html',context)
+
     
     # products = Product.objects.filter(subcategory='Bridal Lehenga')
     # product_list = [
