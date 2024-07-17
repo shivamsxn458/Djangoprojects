@@ -267,7 +267,7 @@ def privacypolicy(request):
 
 def product_api(request):
     products = Product.objects.filter(subcategory='Bridal Lehenga')
-    productsfilter = Product.objects.filter(subcategory='Bridal Lehenga')[:8]
+    productsfilter = Product.objects.filter(subcategory='Bridal Lehenga')[:6]
     context = {'products': products, 'productsfilter': productsfilter}
     product_list = [
         {
