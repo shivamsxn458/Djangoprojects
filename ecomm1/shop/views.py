@@ -266,7 +266,8 @@ def privacypolicy(request):
 ##########################################  JSON API'S BELOW  ##########################################
 
 def product_api(request):
-    products = Product.objects.all()[:8]
+    # products = Product.objects.all()[:8]
+    products = Product.objects.filter(category='Women', subcategory='Bridal Lehenga').order_by('-product_id')[:8]
     product_list = [
         {
             'frontimage':request.build_absolute_uri(product.image.url) if product.image else None,
