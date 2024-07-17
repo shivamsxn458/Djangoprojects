@@ -267,8 +267,6 @@ def privacypolicy(request):
 
 def product_api(request):
     products = Product.objects.filter(subcategory='Bridal Lehenga')
-    productsfilter = Product.objects.filter(subcategory='Bridal Lehenga')[:6]
-    context = {'products': products, 'productsfilter': productsfilter}
     product_list = [
         {
             'frontimage':request.build_absolute_uri(product.image.url) if product.image else None,
@@ -279,7 +277,7 @@ def product_api(request):
             'PurchaseDate':product.purchase_date,
             'ComparewithNew':product.url
         }
-        for product in productsfilter
+        for product in products
     ]
     # return JsonResponse({'products': product_list})
     return JsonResponse(product_list, safe=False)
