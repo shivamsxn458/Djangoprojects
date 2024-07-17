@@ -41,7 +41,7 @@
 <style>
   .centered-button {
     margin: 10px;
-    margin-left: -2px;
+    margin-left: 0px;
   }
   .navbar-toggler {
    background-color: transparent;
@@ -97,6 +97,7 @@
     </ul>
 <br>
 <div>
+	
 {% load socialaccount %}
 {% if user.is_authenticated %}
   <h6 style="color: green;" > Hi! {{ user.username }}</h6>
